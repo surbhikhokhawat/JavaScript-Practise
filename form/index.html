@@ -51,15 +51,22 @@
           <option>Uterine Fibroids</option>
         </select>
       </div>
-      <label for="yes_no_radio">Any previous medical reports?</label>
-      <p>
-      <input type="radio" name="yes_no" checked>Yes</input>
-      </p>
-      <p>
-      <input type="radio" name="yes_no">No</input>
-      </p>
-      <label for="image">Upload Your medical report:</label>
-      <input type="file" name="image" placeholder="Upload document" accept="image/*">
+      <div class="form-group">
+        <label for="yes_no_radio">Any previous medical reports?</label>
+        <p>
+          <input type="radio" name="yes_no" checked>Yes</input>
+        </p>
+        <p>
+          <input type="radio" name="yes_no">No</input>
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Your medical report:</label>
+        <input type="file" name="image" placeholder="Upload document" accept="image/*">
+      </div>
+      <div class="form-group">
+        <textarea rows="4" cols="50" name="comment" form="usrform">Was This helpful? Give us Feedback..</textarea>
+      </div>
       <div class="checkbox">
         <label><input type="checkbox" name="remember">I accept the <b>Terms Of Use</b> & <b>Privacy Policy</b></label>
       </div>
