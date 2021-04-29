@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  
+
   <div class="container">
     <h2>Women Health Consultancy Form</h2>
     <form>
@@ -60,6 +60,25 @@
           <option value="UterineFibroids">Uterine Fibroids</option>
         </select>
       </div>
+      <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Symptoms</h5>
+              <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="symptoms">Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="form-group">
         <label for="yes_no_radio">Any previous medical reports?</label>
         <p>
@@ -83,13 +102,19 @@
       <button type="submit" class="btn btn-default">Register Now</button>
     </form>
   </div>
+  <script src="./sympton.js"></script>
   <script>
     function setConcern() {
+      $('#myModal').modal('show');
       var concern = document.getElementById('problem').value
-      console.log(concern)
+      let data1 = symptomData.filter((item) => {
+        return item.key == concern
+      })
+      console.log(data1[0].values)
+      console.log($('#symptoms'))
     }
-
   </script>
+
 </body>
 
 </html>
