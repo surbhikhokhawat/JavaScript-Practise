@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  
   <div class="container">
     <h2>Women Health Consultancy Form</h2>
     <form>
@@ -43,19 +44,20 @@
       </div>
       <div class="form-group">
         <label for="problem">What is your main Concern?</label>
-        <select id="problem">
-          <option>Heart Disease</option>
-          <option>Breast Cancer</option>
-          <option>Maternity & Infertility</option>
-          <option>Hearing loss</option>
-          <option>Diabetes</option>
-          <option>Hair Loss</option>
-          <option>Obesity</option>
-          <option>Uterine Fibroids</option>
-          <option>HIV/AIDS</option>
-          <option>Polycystic Ovary Syndrome (PCOS)</option>
-          <option>Sexually Transmitted Diseases (STDs)</option>
-          <option>Uterine Fibroids</option>
+        <select onchange="setConcern()" id="problem">
+          <option value="" selected disabled>Choose your concern</option>
+          <option value="HeartDisease">Heart Disease</option>
+          <option value="BreastCancer">Breast Cancer</option>
+          <option value="Maternity&Infertility">Maternity & Infertility</option>
+          <option value="HearingLoss">Hearing Loss</option>
+          <option value="Diabetes">Diabetes</option>
+          <option value="HairLoss">Hair Loss</option>
+          <option value="Obesity">Obesity</option>
+          <option value="UterineFibroids">Uterine Fibroids</option>
+          <option value="HIV/AIDS">HIV/AIDS</option>
+          <option value="PolycysticOvarySyndrome">Polycystic Ovary Syndrome (PCOS)</option>
+          <option value="SexuallyTransmittedDiseases">Sexually Transmitted Diseases (STDs)</option>
+          <option value="UterineFibroids">Uterine Fibroids</option>
         </select>
       </div>
       <div class="form-group">
@@ -72,7 +74,8 @@
         <input type="file" name="image" placeholder="Upload document" accept="image/*">
       </div>
       <div class="form-group">
-        <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Was This helpful? Give us Feedback.."></textarea>
+        <textarea rows="4" cols="50" name="comment" form="usrform"
+          placeholder="Was This helpful? Give us Feedback.."></textarea>
       </div>
       <div class="checkbox">
         <label><input type="checkbox" name="remember">I accept the <b>Terms Of Use</b> & <b>Privacy Policy</b></label>
@@ -80,6 +83,13 @@
       <button type="submit" class="btn btn-default">Register Now</button>
     </form>
   </div>
+  <script>
+    function setConcern() {
+      var concern = document.getElementById('problem').value
+      console.log(concern)
+    }
+
+  </script>
 </body>
 
 </html>
